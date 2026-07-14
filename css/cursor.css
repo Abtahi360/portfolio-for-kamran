@@ -1,0 +1,109 @@
+/* ============================================================
+   cursor.css — Broadcast Focus Custom Cursor
+   
+   Concept: "Broadcast Tally + Lens Focus Ring"
+   - Inner dot  → camera tally light cue (small, solid)
+   - Outer ring → camera lens focus ring (large, thin border)
+   
+   Colors are driven entirely by CSS variables (theme.css),
+   so the cursor updates automatically when the theme changes.
+   No extra JavaScript is needed for theme-awareness.
+   
+   To change cursor colors, edit the --cursor-* variables in theme.css.
+   To change cursor sizes, edit the CONFIG in js/controllers/cursorController.js.
+   ============================================================ */
+
+/* ── Hide default cursor when custom cursor is active ── */
+body.cursor-custom,
+body.cursor-custom * {
+  cursor: none !important;
+}
+
+/* Restore native cursor for form inputs (usability) */
+body.cursor-custom input,
+body.cursor-custom textarea,
+body.cursor-custom select {
+  cursor: text !important;
+}
+
+/* ── Tally Dot — follows mouse exactly ── */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Size & centering set by cursorController.js */
+  border-radius: 50%;
+  background: var(--cursor-dot-bg);
+  pointer-events: none;        /* never intercepts clicks */
+  z-index: 9999;
+  opacity: 0;                  /* hidden until first mouse move */
+  will-change: transform;      /* GPU layer for smooth movement */
+  transition:
+    background-color 0.2s ease,
+    width          0.2s ease,
+    height         0.2s ease,
+    opacity        0.2s ease;
+}
+
+/* ── Focus Ring — trails behind mouse with smooth lerp ── */
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Size & centering set by cursorController.js */
+  border-radius: 50%;
+  border: 1.5px solid var(--cursor-ring-border);
+  background: transparent;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  will-change: transform;
+  transition:
+    border-color 0.25s ease,
+    width        0.25s ease,
+    height       0.25s ease,
+    opacity      0.2s ease;
+}
+
+/* ── Visible state (added after first mouse move) ── */
+.cursor-dot.is-visible  { opacity: 1; }
+.cursor-ring.is-visible { opacity: 1; }
+
+/* ── Hover state: colors shift to accent (red / gold) ── */
+body.cursor-hover .cursor-dot {
+  background: var(--cursor-hover-dot-bg);
+}
+body.cursor-hover .cursor-ring {
+  border-color: var(--cursor-hover-ring-border);
+}
+
+/* ── Click feedback ── */
+.cursor-dot.is-clicking {
+  opacity: 0.6;
+}
+
+/* ── Input field: hide ring for cleaner text editing ── */
+body.cursor-on-input .cursor-ring {
+  opacity: 0;
+}
+
+/* ── Hide on touch / pointer: coarse devices (mobile/tablet) ── */
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+  body.cursor-custom,
+  body.cursor-custom * {
+    cursor: auto !important;
+  }
+}
+
+/* ── Reduced motion: snap ring to position instantly ──
+   The trailing lerp effect is disabled via JS when this matches.
+   CSS transitions are kept for color changes only. ── */
+@media (prefers-reduced-motion: reduce) {
+  .cursor-ring {
+    transition: border-color 0.2s ease, width 0.2s ease, height 0.2s ease;
+  }
+}

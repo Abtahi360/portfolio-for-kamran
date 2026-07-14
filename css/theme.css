@@ -1,0 +1,77 @@
+/* ============================================================
+   theme.css — Design Tokens & Theme Variables
+   All color, typography, and spacing custom properties.
+   To change the site's look, edit the values here.
+   ============================================================ */
+
+:root {
+  /* ── Color Palette (Light Theme) ── */
+  --bg:           #F2EFE9;   /* warm stone background */
+  --bg-surface:   #FAFAF8;   /* slightly lighter panels */
+  --bg-elevated:  #FFFFFF;   /* pure white card surfaces */
+  --ink:          #1A1F2E;   /* deep navy-black text */
+  --ink-2:        #4A5068;   /* secondary text */
+  --ink-3:        #6E7585;   /* metadata, captions, labels */
+  --navy:         #1B3A5C;   /* broadcast navy – primary brand */
+  --navy-dark:    #0D2240;   /* deeper navy for gradients */
+  --red:          #C42B21;   /* breaking red – used sparingly */
+  --red-muted:    rgba(196, 43, 33, 0.12);
+  --gold:         #A8924A;   /* champagne gold – achievements only */
+  --gold-bg:      rgba(168, 146, 74, 0.08);
+  --gold-border:  rgba(168, 146, 74, 0.3);
+  --border:       #D4CEC5;
+  --border-light: #E6E2DC;
+
+  /* ── Typography ── */
+  --font-display:  'Cormorant Garamond', Georgia, serif;
+  --font-body:     'Lato', system-ui, -apple-system, sans-serif;
+  --font-utility:  'IBM Plex Mono', 'Courier New', monospace;
+
+  /* ── Spacing & Layout ── */
+  --nav-h:        68px;
+
+  /* ── Transitions ── */
+  --transition:      0.25s ease;
+  --transition-slow: 0.5s ease;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 4px rgba(26, 31, 46, 0.08);
+  --shadow-md: 0 4px 20px rgba(26, 31, 46, 0.10);
+  --shadow-lg: 0 12px 40px rgba(26, 31, 46, 0.14);
+
+  /* ── Custom Cursor Variables (Light Theme) ──
+     Inspired by broadcast camera tally light + focus ring.
+     Edit these to change cursor colors. */
+  --cursor-dot-bg:           var(--navy);              /* tally dot color */
+  --cursor-ring-border:      rgba(27, 58, 92, 0.28);   /* focus ring color */
+  --cursor-hover-dot-bg:     var(--red);               /* hover: breaking red */
+  --cursor-hover-ring-border: rgba(196, 43, 33, 0.22); /* hover ring accent */
+  --cursor-dot-size:         8px;
+  --cursor-ring-size:        36px;
+}
+
+/* ── Dark Theme Overrides ── */
+[data-theme="dark"] {
+  --bg:           #0C1220;
+  --bg-surface:   #111A2D;
+  --bg-elevated:  #182235;
+  --ink:          #E4E8F0;
+  --ink-2:        #A4AEBE;
+  --ink-3:        #728098;
+  --navy:         #1E3D6E;
+  --navy-dark:    #0C1828;
+  --border:       #1C2B44;
+  --border-light: #162038;
+  --gold-bg:      rgba(168, 146, 74, 0.07);
+
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.50);
+
+  /* Cursor Variables (Dark Theme)
+     Dot becomes soft white, hover accent becomes champagne gold */
+  --cursor-dot-bg:            #E4E8F0;
+  --cursor-ring-border:       rgba(228, 232, 240, 0.22);
+  --cursor-hover-dot-bg:      var(--gold);
+  --cursor-hover-ring-border: rgba(168, 146, 74, 0.25);
+}
