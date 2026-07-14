@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="News Presenter & Broadcast Journalist — Professional portfolio featuring programs, coverage, and achievements.">
-  <title>News Presenter | Broadcast Journalist Portfolio</title>
+  <meta name="description" content="Your Name – News Presenter & Broadcast Journalist. Professional portfolio featuring programs, coverage, and achievements.">
 
-  <!-- Inline theme loader: prevents flash of wrong theme on reload -->
+  <!-- ✏️ EDIT PAGE TITLE: Change "Your Name" below -->
+  <title>Your Name | News Presenter & Broadcast Journalist</title>
+
+  <!-- Inline theme loader – prevents flash of wrong theme -->
   <script>
     (function(){
       var t = localStorage.getItem('portfolioTheme') || 'light';
@@ -19,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- CSS — loaded in dependency order -->
+  <!-- CSS Files -->
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -30,226 +32,1330 @@
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVIGATION
-       Content updated from: js/models/profileData.js
-  ============================================================ -->
-  <header class="nav" id="mainNav" role="banner">
-    <div class="nav__container">
+<!--
+  ============================================================
+  HOW TO EDIT THIS PORTFOLIO
+  ============================================================
+  Look for these markers throughout the file:
+    ✏️ EDIT  — change the text or value here
+    📷 PHOTO — replace the image file path here
+    🎥 VIDEO — replace the YouTube/Facebook embed URL here
+    🔗 LINK  — replace the URL with your real link
 
-      <a href="#home" class="nav__brand" aria-label="Home">
-        <span class="nav__brand-initials" id="navBrandInitials">YN</span>
-        <div class="nav__brand-text">
-          <span class="nav__brand-name" id="navBrandName">Your Name</span>
-          <span class="nav__brand-role" id="navBrandRole">News Presenter</span>
-        </div>
-      </a>
+  The fastest way: use Find & Replace (Ctrl+H or Cmd+H)
+  to replace "Your Name" with your real name everywhere.
+  ============================================================
+-->
 
-      <nav aria-label="Main navigation">
-        <ul class="nav__list" id="navList" role="list">
-          <li><a href="#home"       class="nav__link" data-section="home">Home</a></li>
-          <li><a href="#about"      class="nav__link" data-section="about">About Me</a></li>
-          <li><a href="#programs"   class="nav__link" data-section="programs">Programs</a></li>
-          <li><a href="#experience" class="nav__link" data-section="experience">Experience</a></li>
-          <li><a href="#skills"     class="nav__link" data-section="skills">Skills</a></li>
-          <li>
-            <a href="#achievement" class="nav__link nav__link--achievement" data-section="achievement">
-              Achievement
-              <span class="nav__achievement-star" aria-label="Featured">★</span>
-            </a>
-          </li>
-          <li><a href="#training" class="nav__link" data-section="training">Training</a></li>
-          <li><a href="#gallery"  class="nav__link" data-section="gallery">Gallery</a></li>
-          <li><a href="#contact"  class="nav__link" data-section="contact">Contact</a></li>
-        </ul>
-      </nav>
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<header class="nav" id="mainNav" role="banner">
+  <div class="nav__container">
 
-      <div class="nav__actions">
-        <button class="nav__theme-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
-          <svg class="nav__theme-icon nav__theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-          </svg>
-          <svg class="nav__theme-icon nav__theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-        </button>
-        <button class="nav__hamburger" id="hamburger"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="mobileNav">
-          <span class="nav__hamburger-line"></span>
-          <span class="nav__hamburger-line"></span>
-          <span class="nav__hamburger-line"></span>
-        </button>
+    <!-- ✏️ EDIT: Change initials "YN" and name/role below -->
+    <a href="#home" class="nav__brand" aria-label="Your Name – Home">
+      <span class="nav__brand-initials">YN</span>
+      <div class="nav__brand-text">
+        <span class="nav__brand-name">Your Name</span>
+        <span class="nav__brand-role">News Presenter</span>
       </div>
-    </div>
-  </header>
+    </a>
 
-  <div class="nav__backdrop" id="navBackdrop" aria-hidden="true"></div>
-  <nav class="nav__mobile" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
-    <ul class="nav__mobile-list" role="list">
-      <li><a href="#home"       class="nav__mobile-link">Home</a></li>
-      <li><a href="#about"      class="nav__mobile-link">About Me</a></li>
-      <li><a href="#programs"   class="nav__mobile-link">Programs &amp; Coverage</a></li>
-      <li><a href="#experience" class="nav__mobile-link">Work Experience</a></li>
-      <li><a href="#skills"     class="nav__mobile-link">Skills</a></li>
-      <li><a href="#achievement" class="nav__mobile-link nav__mobile-link--achievement">Achievement ★</a></li>
-      <li><a href="#training"   class="nav__mobile-link">Training</a></li>
-      <li><a href="#gallery"    class="nav__mobile-link">Media Gallery</a></li>
-      <li><a href="#contact"    class="nav__mobile-link">Contact</a></li>
-    </ul>
-  </nav>
+    <nav aria-label="Main navigation">
+      <ul class="nav__list" role="list">
+        <li><a href="#home"       class="nav__link" data-section="home">Home</a></li>
+        <li><a href="#about"      class="nav__link" data-section="about">About Me</a></li>
+        <li><a href="#programs"   class="nav__link" data-section="programs">Programs</a></li>
+        <li><a href="#experience" class="nav__link" data-section="experience">Experience</a></li>
+        <li><a href="#skills"     class="nav__link" data-section="skills">Skills</a></li>
+        <li>
+          <a href="#achievement" class="nav__link nav__link--achievement" data-section="achievement">
+            Achievement
+            <span class="nav__achievement-star" aria-label="Featured">★</span>
+          </a>
+        </li>
+        <li><a href="#training" class="nav__link" data-section="training">Training</a></li>
+        <li><a href="#gallery"  class="nav__link" data-section="gallery">Gallery</a></li>
+        <li><a href="#contact"  class="nav__link" data-section="contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <main id="main">
-
-    <!-- HOME — rendered from js/models/profileData.js -->
-    <section id="home" class="hero" aria-label="Introduction">
-      <div id="heroContainer" class="hero__container"></div>
-      <div class="hero__ticker" aria-hidden="true" id="heroTicker">
-        <div class="hero__ticker-label">LATEST</div>
-        <div class="hero__ticker-track">
-          <div class="hero__ticker-tape" id="tickerTape"></div>
-        </div>
-      </div>
-      <div class="hero__scroll-hint" aria-hidden="true">
-        <span class="hero__scroll-text">Scroll</span>
-        <span class="hero__scroll-line"></span>
-      </div>
-    </section>
-
-    <!-- ABOUT — rendered from js/models/profileData.js -->
-    <section id="about" class="section about" aria-label="About Me">
-      <div class="container">
-        <div class="section-header reveal" id="aboutHeader"></div>
-        <div id="aboutGrid"></div>
-      </div>
-    </section>
-
-    <!-- PROGRAMS — rendered from js/models/programsData.js -->
-    <section id="programs" class="section programs" aria-label="Programs and Coverage">
-      <div class="container">
-        <div class="section-header reveal" id="programsHeader"></div>
-        <div class="programs__tabs reveal" role="tablist" aria-label="Program categories" id="programsTabs"></div>
-        <div class="programs__panels" id="programsPanels"></div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE — rendered from js/models/experienceData.js -->
-    <section id="experience" class="section experience" aria-label="Work Experience">
-      <div class="container">
-        <div class="section-header reveal" id="experienceHeader"></div>
-        <div id="experienceTimeline"></div>
-      </div>
-    </section>
-
-    <!-- SKILLS — rendered from js/models/skillsData.js -->
-    <section id="skills" class="section skills" aria-label="Skills and Expertise">
-      <div class="container">
-        <div class="section-header reveal" id="skillsHeader"></div>
-        <div class="skills__grid" id="skillsGrid"></div>
-      </div>
-    </section>
-
-    <!-- ACHIEVEMENT — rendered from js/models/achievementsData.js -->
-    <section id="achievement" class="section achievement" aria-label="Achievements and Awards">
-      <div class="container">
-        <div class="section-header reveal" id="achievementHeader"></div>
-        <div class="achievement__grid" id="achievementGrid"></div>
-      </div>
-    </section>
-
-    <!-- TRAINING — rendered from js/models/trainingData.js -->
-    <section id="training" class="section training" aria-label="Training and Certification">
-      <div class="container">
-        <div class="section-header reveal" id="trainingHeader"></div>
-        <div class="training__grid" id="trainingGrid"></div>
-      </div>
-    </section>
-
-    <!-- GALLERY — rendered from js/models/galleryData.js -->
-    <section id="gallery" class="section gallery" aria-label="Media Gallery">
-      <div class="container">
-        <div class="section-header reveal" id="galleryHeader"></div>
-        <div class="gallery__filters reveal" id="galleryFilters" role="group" aria-label="Filter gallery"></div>
-        <div id="galleryGrid"></div>
-      </div>
-    </section>
-
-    <!-- CONTACT — rendered from js/models/contactData.js -->
-    <section id="contact" class="section contact" aria-label="Contact">
-      <div class="container">
-        <div class="section-header reveal" id="contactHeader"></div>
-        <div class="contact__grid" id="contactGrid"></div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER — partially rendered from profileData.js -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <span class="footer__brand-name" id="footerName">Your Name</span>
-          <span class="footer__brand-role" id="footerRole">News Presenter &amp; Broadcast Journalist</span>
-          <p class="footer__brand-tag">Delivering truth with clarity and composure.</p>
-        </div>
-        <nav class="footer__nav" aria-label="Footer navigation">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#programs">Programs</a>
-          <a href="#experience">Experience</a>
-          <a href="#achievement">Achievements</a>
-          <a href="#training">Training</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div class="footer__actions">
-          <a href="assets/documents/resume.pdf" download class="btn btn--outline btn--sm" id="footerResumeBtn">Download Resume</a>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <span class="footer__copy">© <span id="currentYear"></span> Your Name. All rights reserved.</span>
-        <span class="footer__tag">Portfolio · Broadcast Authority</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- LIGHTBOX MODAL -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media viewer" hidden>
-    <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
-    <div class="lightbox__container">
-      <button class="lightbox__close" id="lightboxClose" aria-label="Close media viewer">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true">
-          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    <div class="nav__actions">
+      <button class="nav__theme-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="nav__theme-icon nav__theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="nav__theme-icon nav__theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
       </button>
-      <div class="lightbox__media" id="lightboxMedia" role="img" aria-live="polite"></div>
-      <div class="lightbox__controls">
-        <button class="lightbox__nav-btn" id="lightboxPrev" aria-label="Previous item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <button class="lightbox__nav-btn" id="lightboxNext" aria-label="Next item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<div class="nav__backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<!-- ✏️ EDIT: Mobile nav links (same as desktop above) -->
+<nav class="nav__mobile" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+  <ul class="nav__mobile-list" role="list">
+    <li><a href="#home"       class="nav__mobile-link">Home</a></li>
+    <li><a href="#about"      class="nav__mobile-link">About Me</a></li>
+    <li><a href="#programs"   class="nav__mobile-link">Programs &amp; Coverage</a></li>
+    <li><a href="#experience" class="nav__mobile-link">Work Experience</a></li>
+    <li><a href="#skills"     class="nav__mobile-link">Skills</a></li>
+    <li><a href="#achievement" class="nav__mobile-link nav__mobile-link--achievement">Achievement ★</a></li>
+    <li><a href="#training"   class="nav__mobile-link">Training</a></li>
+    <li><a href="#gallery"    class="nav__mobile-link">Media Gallery</a></li>
+    <li><a href="#contact"    class="nav__mobile-link">Contact</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- ============================================================
+     HOME / HERO SECTION
+============================================================ -->
+<section id="home" class="hero" aria-label="Introduction">
+  <div class="hero__container">
+
+    <!-- Left: Content -->
+    <div class="hero__content">
+
+      <!-- ✏️ EDIT: Small text above name -->
+      <span class="hero__slug">On Air &nbsp;·&nbsp; Breaking News &nbsp;·&nbsp; Live Coverage</span>
+
+      <!-- ✏️ EDIT: Your first and last name (large display) -->
+      <h1 class="hero__name">Your<br>Name</h1>
+
+      <!-- Broadcast chyron / lower-third identity block -->
+      <div class="hero__chyron" aria-label="Professional title">
+        <span class="hero__chyron-accent" aria-hidden="true"></span>
+        <div class="hero__chyron-inner">
+          <!-- ✏️ EDIT: Your main professional title -->
+          <span class="hero__chyron-primary">News Presenter &amp; Broadcast Journalist</span>
+          <!-- ✏️ EDIT: Subtitle / specialisations -->
+          <span class="hero__chyron-secondary">Television &nbsp;·&nbsp; Digital Media &nbsp;·&nbsp; Live Coverage</span>
+        </div>
+      </div>
+
+      <!-- ✏️ EDIT: Your professional statement / tagline -->
+      <p class="hero__statement">
+        Every story deserves a voice that commands trust. With over a decade of live broadcasting,
+        breaking news anchoring, and high-stakes interview moderation, I bring accuracy, composure,
+        and editorial intelligence to every on-camera moment.
+      </p>
+
+      <div class="hero__cta" role="group" aria-label="Primary actions">
+        <a href="#programs" class="btn btn--primary">View Programs</a>
+
+        <!-- 📷 EDIT RESUME PATH: Replace "assets/documents/resume.pdf" with your file path -->
+        <!-- ✏️ EDIT: Replace "Your Name" in the download attribute -->
+        <a href="assets/documents/resume.pdf" download="YourName-Resume.pdf" class="btn btn--secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+        <a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          View Resume
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Portrait with camera-frame corners -->
+    <div class="hero__visual">
+      <div class="hero__frame" id="heroFrame">
+        <!-- Camera viewfinder corner marks — signature design element -->
+        <span class="hero__corner hero__corner--tl" aria-hidden="true"></span>
+        <span class="hero__corner hero__corner--tr" aria-hidden="true"></span>
+        <span class="hero__corner hero__corner--bl" aria-hidden="true"></span>
+        <span class="hero__corner hero__corner--br" aria-hidden="true"></span>
+
+        <!-- 📷 EDIT PHOTO: Place your photo at assets/images/profile-news-presenter.jpg
+             OR change the src path below to your photo filename.
+             Recommended size: 800x1067px (portrait). -->
+        <img src="assets/images/profile-news-presenter.jpg"
+             alt="Your Name – News Presenter in broadcast studio"
+             class="hero__image" id="heroImage">
+
+        <div class="hero__on-air" aria-label="On air indicator">
+          <span class="hero__on-air-dot" aria-hidden="true"></span>
+          <span>On Air</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Live news ticker strip -->
+  <!-- ✏️ EDIT TICKER: Change the program names below. Keep the · separators. -->
+  <div class="hero__ticker" aria-hidden="true">
+    <div class="hero__ticker-label">LATEST</div>
+    <div class="hero__ticker-track">
+      <div class="hero__ticker-tape" id="tickerTape">
+        National Election Coverage 2024 &nbsp;&nbsp;·&nbsp;&nbsp;
+        UN General Assembly Live Desk &nbsp;&nbsp;·&nbsp;&nbsp;
+        Breaking News Anchor &nbsp;&nbsp;·&nbsp;&nbsp;
+        Prime Minister Press Conference &nbsp;&nbsp;·&nbsp;&nbsp;
+        ICC World Cup Live Studio &nbsp;&nbsp;·&nbsp;&nbsp;
+        COP28 International Coverage &nbsp;&nbsp;·&nbsp;&nbsp;
+        National Budget Special Broadcast &nbsp;&nbsp;·&nbsp;&nbsp;
+        Corporate Summit Host &nbsp;&nbsp;·&nbsp;&nbsp;
+        National Film Awards Live Coverage &nbsp;&nbsp;·&nbsp;&nbsp;
+        Field Reporting – Rohingya Crisis &nbsp;&nbsp;·&nbsp;&nbsp;
+        <!-- Duplicated below for seamless infinite scroll loop -->
+        National Election Coverage 2024 &nbsp;&nbsp;·&nbsp;&nbsp;
+        UN General Assembly Live Desk &nbsp;&nbsp;·&nbsp;&nbsp;
+        Breaking News Anchor &nbsp;&nbsp;·&nbsp;&nbsp;
+        Prime Minister Press Conference &nbsp;&nbsp;·&nbsp;&nbsp;
+        ICC World Cup Live Studio &nbsp;&nbsp;·&nbsp;&nbsp;
+        COP28 International Coverage &nbsp;&nbsp;·&nbsp;&nbsp;
+        National Budget Special Broadcast &nbsp;&nbsp;·&nbsp;&nbsp;
+        Corporate Summit Host &nbsp;&nbsp;·&nbsp;&nbsp;
+        National Film Awards Live Coverage &nbsp;&nbsp;·&nbsp;&nbsp;
+        Field Reporting – Rohingya Crisis &nbsp;&nbsp;·&nbsp;&nbsp;
       </div>
     </div>
   </div>
 
-  <!-- No-JS fallback -->
-  <noscript>
-    <style>.main-noscript{display:flex;align-items:center;justify-content:center;min-height:60vh;text-align:center;padding:2rem;font-family:system-ui,sans-serif;}</style>
-    <div class="main-noscript">
-      <p><strong>JavaScript is required</strong> to display this portfolio.<br>
-      Please enable JavaScript in your browser settings and reload the page.</p>
-    </div>
-  </noscript>
+  <div class="hero__scroll-hint" aria-hidden="true">
+    <span class="hero__scroll-text">Scroll</span>
+    <span class="hero__scroll-line"></span>
+  </div>
+</section>
 
-  <!-- Main application entry (ES module) -->
-  <script type="module" src="js/app.js"></script>
+
+<!-- ============================================================
+     ABOUT ME SECTION
+============================================================ -->
+<section id="about" class="section about" aria-label="About Me">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">About Me</span>
+      <!-- ✏️ EDIT: Section headline -->
+      <h2 class="section-title">The Voice Behind the Story</h2>
+    </div>
+
+    <div class="about__grid">
+
+      <!-- Left Sidebar: Stats & Profile Card -->
+      <aside class="about__sidebar reveal">
+        <!-- Profile card -->
+        <div class="about__profile-card">
+          <span class="about__profile-accent" aria-hidden="true"></span>
+          <div class="about__profile-body">
+            <!-- ✏️ EDIT: Your name, role and start year -->
+            <span class="about__profile-name">Your Name</span>
+            <span class="about__profile-role">Senior News Presenter</span>
+            <span class="about__profile-since">Broadcasting since 2013</span>
+          </div>
+        </div>
+
+        <!-- Stats grid — ✏️ EDIT: Update numbers and labels -->
+        <div class="about__stats">
+          <div class="about__stat">
+            <span class="about__stat-number">10+</span>
+            <span class="about__stat-label">Years on Air</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-number">500+</span>
+            <span class="about__stat-label">Programs Hosted</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-number">12</span>
+            <span class="about__stat-label">Awards &amp; Honours</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-number">4</span>
+            <span class="about__stat-label">National Networks</span>
+          </div>
+        </div>
+
+        <!-- Resume buttons in sidebar -->
+        <div class="about__sidebar-cta">
+          <a href="assets/documents/resume.pdf" download="YourName-Resume.pdf" class="btn btn--secondary btn--sm">Download Resume</a>
+          <a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">View Resume</a>
+        </div>
+      </aside>
+
+      <!-- Right: Bio Content -->
+      <div class="about__content reveal">
+
+        <!-- ✏️ EDIT: Opening paragraph (bold lead) -->
+        <p class="about__lead">
+          I am a news presenter and broadcast journalist with over a decade of live television experience.
+          My career has been built on the belief that responsible journalism, delivered with clarity and
+          composure, is one of the most powerful forces in public life.
+        </p>
+
+        <!-- ✏️ EDIT: Second paragraph -->
+        <p class="about__body">
+          From anchoring breaking national news to moderating high-stakes political interviews and
+          coordinating live coverage of international events, I have cultivated a reputation for
+          calm authority under pressure. My editorial instincts are sharp, my delivery is precise,
+          and my commitment to accuracy is unwavering.
+        </p>
+
+        <!-- ✏️ EDIT: Pull quote -->
+        <blockquote class="about__quote">
+          "Journalism is not just about reporting events. It is about shaping how a nation
+          understands itself at its most defining moments."
+        </blockquote>
+
+        <!-- ✏️ EDIT: Third paragraph -->
+        <p class="about__body">
+          My on-camera presence is defined by strong voice modulation, natural teleprompter fluency,
+          and the ability to adapt in real time when stories evolve live. Whether covering a breaking
+          event in the field, anchoring from the studio, or moderating a panel discussion, I bring
+          the same level of preparation, professionalism, and audience awareness to every broadcast.
+        </p>
+
+        <!-- ✏️ EDIT: Highlight bullet points -->
+        <div class="about__points">
+          <div class="about__point"><span class="about__point-dot" aria-hidden="true"></span><span>Live breaking news anchoring and crisis coverage</span></div>
+          <div class="about__point"><span class="about__point-dot" aria-hidden="true"></span><span>High-profile political and social interview moderation</span></div>
+          <div class="about__point"><span class="about__point-dot" aria-hidden="true"></span><span>Bilingual presentation in English and Bengali</span></div>
+          <div class="about__point"><span class="about__point-dot" aria-hidden="true"></span><span>Special event anchoring and live ceremony hosting</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PROGRAMS & COVERAGE SECTION
+============================================================ -->
+<section id="programs" class="section programs" aria-label="Programs and Coverage">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">On Camera</span>
+      <h2 class="section-title">Programs &amp; Coverage</h2>
+      <p class="section-desc">A curated selection of programs, special coverage, and broadcast assignments. All videos play directly within this page.</p>
+    </div>
+
+    <!-- Tab buttons — ✏️ EDIT: Change category names if needed -->
+    <div class="programs__tabs reveal" role="tablist" aria-label="Program categories">
+      <button class="programs__tab programs__tab--active" role="tab" aria-selected="true"  aria-controls="panel-national"       data-tab="national">National</button>
+      <button class="programs__tab"                       role="tab" aria-selected="false" aria-controls="panel-international"   data-tab="international">International</button>
+      <button class="programs__tab"                       role="tab" aria-selected="false" aria-controls="panel-sports"          data-tab="sports">Sports</button>
+      <button class="programs__tab"                       role="tab" aria-selected="false" aria-controls="panel-entertainment"   data-tab="entertainment">Entertainment</button>
+      <button class="programs__tab"                       role="tab" aria-selected="false" aria-controls="panel-others"          data-tab="others">Others</button>
+    </div>
+
+    <div class="programs__panels">
+
+      <!-- ── NATIONAL ── -->
+      <div class="programs__panel programs__panel--active" id="panel-national" role="tabpanel" aria-label="National programs">
+        <div class="programs__grid">
+
+          <article class="video-card">
+            <div class="video-card__embed-wrap">
+              <!-- 🎥 EDIT VIDEO: Replace the src URL with your YouTube embed URL
+                   Format: https://www.youtube.com/embed/YOUR_VIDEO_ID
+                   Do NOT use the normal watch link (youtube.com/watch?v=...) -->
+              <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U"
+                      title="National Election 2024 Live Coverage"
+                      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta">
+                <span class="video-card__category">National</span><!-- ✏️ EDIT category -->
+                <span class="video-card__platform video-card__platform--youtube">YouTube</span>
+              </div>
+              <h3 class="video-card__title">National Election 2024: Live Coverage</h3><!-- ✏️ EDIT -->
+              <p class="video-card__desc">Anchored the live election-night broadcast with real-time result analysis and expert panel discussion.</p><!-- ✏️ EDIT -->
+              <span class="video-card__date">January 2024</span><!-- ✏️ EDIT -->
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-card__embed-wrap">
+              <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw"
+                      title="Prime Minister Press Conference Live"
+                      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta">
+                <span class="video-card__category">National</span>
+                <span class="video-card__platform video-card__platform--youtube">YouTube</span>
+              </div>
+              <h3 class="video-card__title">Prime Minister Press Conference – Live</h3>
+              <p class="video-card__desc">Moderated the live broadcast of the Prime Minister's national address on economic policy and infrastructure development.</p>
+              <span class="video-card__date">March 2023</span>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-card__embed-wrap">
+              <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U"
+                      title="National Budget 2023-24 Special Coverage"
+                      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta">
+                <span class="video-card__category">National</span>
+                <span class="video-card__platform video-card__platform--youtube">YouTube</span>
+              </div>
+              <h3 class="video-card__title">National Budget 2023–24: Special Coverage</h3>
+              <p class="video-card__desc">Full-day live coverage of the national budget presentation with expert economist commentary and real-time analysis.</p>
+              <span class="video-card__date">June 2023</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ── INTERNATIONAL ── -->
+      <div class="programs__panel" id="panel-international" role="tabpanel" aria-label="International programs" hidden>
+        <div class="programs__grid">
+
+          <article class="video-card">
+            <div class="video-card__embed-wrap">
+              <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw"
+                      title="UN General Assembly 2023 Live Desk"
+                      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta">
+                <span class="video-card__category">International</span>
+                <span class="video-card__platform video-card__platform--youtube">YouTube</span>
+              </div>
+              <h3 class="video-card__title">UN General Assembly 2023 – Live Desk</h3>
+              <p class="video-card__desc">Anchored live desk coverage of Bangladesh's participation at the United Nations General Assembly, 78th session.</p>
+              <span class="video-card__date">September 2023</span>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-card__embed-wrap">
+              <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U"
+                      title="COP28 Climate Summit International Desk"
+                      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta">
+                <span class="video-card__category">International</span>
+                <span class="video-card__platform video-card__platform--youtube">YouTube</span>
+              </div>
+              <h3 class="video-card__title">COP28 Climate Summit: International Desk</h3>
+              <p class="video-card__desc">Special desk coverage of the COP28 climate conference, covering bilateral meetings and key policy outcomes for South Asia.</p>
+              <span class="video-card__date">December 2023</span>
+            </div>
+          </article>
+
+          <!-- Facebook video placeholder -->
+          <article class="video-card">
+            <div class="video-card__embed-wrap video-card__embed-wrap--placeholder">
+              <!--
+                🎥 FACEBOOK VIDEO: Replace this entire comment block with your Facebook iframe embed code.
+                How to get it:
+                  1. Go to your Facebook video post
+                  2. Click the three dots (...) on the post
+                  3. Click "Embed" and copy the iframe code
+                  4. Paste it here in place of this comment
+
+                Example Facebook iframe:
+                <iframe src="https://www.facebook.com/plugins/video.php?href=YOUR_VIDEO_URL&show_text=false"
+                        width="100%" height="100%" style="border:none;overflow:hidden"
+                        scrolling="no" frameborder="0" allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+              -->
+              <div class="embed-placeholder" aria-label="Facebook video placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span>Facebook Video</span>
+                <small>Replace this block with your Facebook embed code</small>
+              </div>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta">
+                <span class="video-card__category">International</span><!-- ✏️ -->
+                <span class="video-card__platform video-card__platform--facebook">Facebook</span>
+              </div>
+              <h3 class="video-card__title">Rohingya Crisis: Field Report from Cox's Bazar</h3><!-- ✏️ -->
+              <p class="video-card__desc">On-ground field coverage of the Rohingya humanitarian situation at Cox's Bazar refugee camps, with UNHCR coordination.</p><!-- ✏️ -->
+              <span class="video-card__date">November 2022</span><!-- ✏️ -->
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ── SPORTS ── -->
+      <div class="programs__panel" id="panel-sports" role="tabpanel" aria-label="Sports programs" hidden>
+        <div class="programs__grid">
+
+          <article class="video-card">
+            <div class="video-card__embed-wrap">
+              <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" title="ICC Cricket World Cup 2023 Live Studio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta"><span class="video-card__category">Sports</span><span class="video-card__platform video-card__platform--youtube">YouTube</span></div>
+              <h3 class="video-card__title">ICC Cricket World Cup 2023 – Live Studio</h3><!-- ✏️ -->
+              <p class="video-card__desc">Hosted the live studio show for Bangladesh's ICC Cricket World Cup campaign including pre-match briefings and post-match analysis.</p><!-- ✏️ -->
+              <span class="video-card__date">October – November 2023</span><!-- ✏️ -->
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-card__embed-wrap">
+              <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" title="National Sports Day Special Broadcast" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta"><span class="video-card__category">Sports</span><span class="video-card__platform video-card__platform--youtube">YouTube</span></div>
+              <h3 class="video-card__title">National Sports Day Special Broadcast</h3><!-- ✏️ -->
+              <p class="video-card__desc">Anchored the National Sports Day programme covering athletes, achievements, and sporting milestones across disciplines.</p><!-- ✏️ -->
+              <span class="video-card__date">April 2023</span><!-- ✏️ -->
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ── ENTERTAINMENT ── -->
+      <div class="programs__panel" id="panel-entertainment" role="tabpanel" aria-label="Entertainment programs" hidden>
+        <div class="programs__grid">
+
+          <article class="video-card">
+            <div class="video-card__embed-wrap">
+              <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" title="National Film Awards 2023 Live Red Carpet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta"><span class="video-card__category">Entertainment</span><span class="video-card__platform video-card__platform--youtube">YouTube</span></div>
+              <h3 class="video-card__title">National Film Awards 2023 – Live Red Carpet</h3><!-- ✏️ -->
+              <p class="video-card__desc">Hosted the live red carpet and awards ceremony with exclusive celebrity interviews and behind-the-scenes access.</p><!-- ✏️ -->
+              <span class="video-card__date">October 2023</span><!-- ✏️ -->
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-card__embed-wrap">
+              <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" title="Pohela Boishakh Cultural Festival Live" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta"><span class="video-card__category">Entertainment</span><span class="video-card__platform video-card__platform--youtube">YouTube</span></div>
+              <h3 class="video-card__title">Pohela Boishakh Cultural Festival – Live</h3><!-- ✏️ -->
+              <p class="video-card__desc">Live coverage of Pohela Boishakh celebrations featuring cultural performances, community events, and heritage stories.</p><!-- ✏️ -->
+              <span class="video-card__date">April 2023</span><!-- ✏️ -->
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ── OTHERS ── -->
+      <div class="programs__panel" id="panel-others" role="tabpanel" aria-label="Other programs" hidden>
+        <div class="programs__grid">
+
+          <article class="video-card">
+            <div class="video-card__embed-wrap">
+              <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" title="National Corporate Excellence Summit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta"><span class="video-card__category">Corporate</span><span class="video-card__platform video-card__platform--youtube">YouTube</span></div>
+              <h3 class="video-card__title">National Corporate Excellence Summit – Anchor</h3><!-- ✏️ -->
+              <p class="video-card__desc">Official anchor for the National Corporate Excellence Summit, moderating panel sessions and VIP keynote addresses.</p><!-- ✏️ -->
+              <span class="video-card__date">February 2024</span><!-- ✏️ -->
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-card__embed-wrap">
+              <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" title="National Health Awareness Campaign" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__meta"><span class="video-card__category">Public Service</span><span class="video-card__platform video-card__platform--youtube">YouTube</span></div>
+              <h3 class="video-card__title">National Health Awareness Campaign – Host</h3><!-- ✏️ -->
+              <p class="video-card__desc">Hosted a live broadcast series on national health awareness in partnership with the Ministry of Health and WHO Bangladesh.</p><!-- ✏️ -->
+              <span class="video-card__date">August 2022</span><!-- ✏️ -->
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div><!-- /programs__panels -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     WORK EXPERIENCE SECTION
+============================================================ -->
+<section id="experience" class="section experience" aria-label="Work Experience">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">Career</span>
+      <h2 class="section-title">Work Experience</h2>
+      <p class="section-desc">A chronological record of broadcast roles, programs, and key responsibilities across networks.</p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- ✏️ EDIT JOB 1 (most recent) -->
+      <article class="timeline__item reveal">
+        <div class="timeline__marker" aria-hidden="true"><span class="timeline__dot"></span></div>
+        <div class="timeline__body">
+          <div class="timeline__header">
+            <div class="timeline__title-group">
+              <h3 class="timeline__role">Senior News Presenter</h3><!-- ✏️ -->
+              <span class="timeline__org">Channel Name Broadcast Network</span><!-- ✏️ -->
+            </div>
+            <span class="timeline__period">2021 – Present</span><!-- ✏️ -->
+          </div>
+          <p class="timeline__desc">Lead news presenter for primetime evening bulletins, responsible for anchoring live national and international coverage. Regularly moderates special-event broadcasts including state functions, elections, and breaking crisis situations.</p><!-- ✏️ -->
+          <ul class="timeline__responsibilities">
+            <li>Anchoring daily primetime news bulletins — national and international desk</li><!-- ✏️ -->
+            <li>Live coverage of national elections, state events, and crisis breaking news</li>
+            <li>Interviewing senior government ministers, economists, and policy experts</li>
+            <li>Coordinating with editorial team on real-time script revision during live events</li>
+            <li>Moderating the weekly flagship current affairs debate programme</li>
+          </ul>
+          <div class="timeline__tags">
+            <span class="timeline__tag">Live News</span><!-- ✏️ -->
+            <span class="timeline__tag">Breaking News</span>
+            <span class="timeline__tag">Debate Moderation</span>
+            <span class="timeline__tag">Primetime</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ✏️ EDIT JOB 2 -->
+      <article class="timeline__item reveal">
+        <div class="timeline__marker" aria-hidden="true"><span class="timeline__dot"></span></div>
+        <div class="timeline__body">
+          <div class="timeline__header">
+            <div class="timeline__title-group">
+              <h3 class="timeline__role">News Presenter &amp; Programme Host</h3><!-- ✏️ -->
+              <span class="timeline__org">National Television Channel</span><!-- ✏️ -->
+            </div>
+            <span class="timeline__period">2019 – 2021</span><!-- ✏️ -->
+          </div>
+          <p class="timeline__desc">Presented daily news bulletins and hosted a weekly interview programme featuring prominent public figures, academics, and industry leaders. Managed live studio broadcasts during significant national events and cultural milestones.</p><!-- ✏️ -->
+          <ul class="timeline__responsibilities">
+            <li>Daily news bulletin presentation — morning and afternoon editions</li>
+            <li>Weekly interview programme with high-profile national guests</li>
+            <li>Live studio anchoring during national sports events and ceremonies</li>
+            <li>Real-time teleprompter operation and script adaptation</li>
+          </ul>
+          <div class="timeline__tags">
+            <span class="timeline__tag">Interviews</span>
+            <span class="timeline__tag">Programme Host</span>
+            <span class="timeline__tag">Studio Anchoring</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ✏️ EDIT JOB 3 -->
+      <article class="timeline__item reveal">
+        <div class="timeline__marker" aria-hidden="true"><span class="timeline__dot"></span></div>
+        <div class="timeline__body">
+          <div class="timeline__header">
+            <div class="timeline__title-group">
+              <h3 class="timeline__role">Special Coverage Presenter &amp; Field Anchor</h3><!-- ✏️ -->
+              <span class="timeline__org">Broadcast Media Group</span><!-- ✏️ -->
+            </div>
+            <span class="timeline__period">2016 – 2019</span><!-- ✏️ -->
+          </div>
+          <p class="timeline__desc">Assigned to special and field coverage including political summits, natural disasters, and major public events. Developed expertise in live unscripted broadcasting under high-pressure conditions.</p><!-- ✏️ -->
+          <ul class="timeline__responsibilities">
+            <li>Field anchoring for political campaigns and government press events</li>
+            <li>Live coverage from disaster zones and emergency situations</li>
+            <li>On-location presentation for international delegation visits</li>
+            <li>Contributor to documentary-style current affairs series</li>
+          </ul>
+          <div class="timeline__tags">
+            <span class="timeline__tag">Field Reporting</span>
+            <span class="timeline__tag">Special Coverage</span>
+            <span class="timeline__tag">Crisis Broadcast</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ✏️ EDIT JOB 4 (earliest) -->
+      <article class="timeline__item reveal">
+        <div class="timeline__marker" aria-hidden="true"><span class="timeline__dot"></span></div>
+        <div class="timeline__body">
+          <div class="timeline__header">
+            <div class="timeline__title-group">
+              <h3 class="timeline__role">Junior News Presenter</h3><!-- ✏️ -->
+              <span class="timeline__org">Private Television Network</span><!-- ✏️ -->
+            </div>
+            <span class="timeline__period">2013 – 2016</span><!-- ✏️ -->
+          </div>
+          <p class="timeline__desc">Began broadcast career as a junior presenter, working across multiple programming shifts and gaining foundational experience in studio production, newsroom operations, and audience communication.</p><!-- ✏️ -->
+          <ul class="timeline__responsibilities">
+            <li>Presenting news updates and bulletin segments across shifts</li>
+            <li>Assisting in production coordination and script preparation</li>
+            <li>Learning studio communication protocols and floor direction</li>
+            <li>Developing teleprompter fluency and on-camera composure</li>
+          </ul>
+          <div class="timeline__tags">
+            <span class="timeline__tag">Junior Presenter</span>
+            <span class="timeline__tag">Newsroom Ops</span>
+            <span class="timeline__tag">Studio Production</span>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /timeline -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SKILLS SECTION
+============================================================ -->
+<section id="skills" class="section skills" aria-label="Skills and Expertise">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">Capabilities</span>
+      <h2 class="section-title">Skills &amp; Expertise</h2>
+      <p class="section-desc">Core competencies developed through years of live television, newsroom operations, and public communication.</p>
+    </div>
+
+    <!-- ✏️ EDIT SKILLS: Change category titles and skill tags below -->
+    <div class="skills__grid">
+
+      <div class="skills__category reveal">
+        <div class="skills__cat-header">
+          <span class="skills__cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg></span>
+          <h3 class="skills__cat-title">On-Camera Presentation</h3><!-- ✏️ -->
+        </div>
+        <div class="skills__tags">
+          <span class="skill-tag">Live News Anchoring</span><!-- ✏️ Add/remove skill tags -->
+          <span class="skill-tag">Teleprompter Proficiency</span>
+          <span class="skill-tag">Studio Composure</span>
+          <span class="skill-tag">Camera Presence</span>
+          <span class="skill-tag">Audience Engagement</span>
+          <span class="skill-tag">Facial Expression Control</span>
+        </div>
+      </div>
+
+      <div class="skills__category reveal">
+        <div class="skills__cat-header">
+          <span class="skills__cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
+          <h3 class="skills__cat-title">Newsroom &amp; Editorial</h3>
+        </div>
+        <div class="skills__tags">
+          <span class="skill-tag">Editorial Judgment</span>
+          <span class="skill-tag">Script Reading &amp; Adaptation</span>
+          <span class="skill-tag">News Verification</span>
+          <span class="skill-tag">Rundown Management</span>
+          <span class="skill-tag">Bulletin Production</span>
+          <span class="skill-tag">Media Ethics</span>
+        </div>
+      </div>
+
+      <div class="skills__category reveal">
+        <div class="skills__cat-header">
+          <span class="skills__cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <h3 class="skills__cat-title">Interview &amp; Moderation</h3>
+        </div>
+        <div class="skills__tags">
+          <span class="skill-tag">Political Interviews</span>
+          <span class="skill-tag">Panel Moderation</span>
+          <span class="skill-tag">Debate Facilitation</span>
+          <span class="skill-tag">Guest Management</span>
+          <span class="skill-tag">Tough Question Handling</span>
+          <span class="skill-tag">Active Listening</span>
+        </div>
+      </div>
+
+      <div class="skills__category reveal">
+        <div class="skills__cat-header">
+          <span class="skills__cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></span>
+          <h3 class="skills__cat-title">Voice &amp; Delivery</h3>
+        </div>
+        <div class="skills__tags">
+          <span class="skill-tag">Voice Modulation</span>
+          <span class="skill-tag">Diction &amp; Pronunciation</span>
+          <span class="skill-tag">Pace Control</span>
+          <span class="skill-tag">Bilingual (EN / BN)</span>
+          <span class="skill-tag">Tonal Authority</span>
+          <span class="skill-tag">Emotional Register</span>
+        </div>
+      </div>
+
+      <div class="skills__category reveal">
+        <div class="skills__cat-header">
+          <span class="skills__cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
+          <h3 class="skills__cat-title">Live Broadcast Handling</h3>
+        </div>
+        <div class="skills__tags">
+          <span class="skill-tag">Breaking News Coverage</span>
+          <span class="skill-tag">Real-Time Script Changes</span>
+          <span class="skill-tag">IFB &amp; Floor Communication</span>
+          <span class="skill-tag">Crisis Composure</span>
+          <span class="skill-tag">Ad-Lib Confidence</span>
+          <span class="skill-tag">Multi-Feed Coordination</span>
+        </div>
+      </div>
+
+      <div class="skills__category reveal">
+        <div class="skills__cat-header">
+          <span class="skills__cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+          <h3 class="skills__cat-title">Digital Media Adaptability</h3>
+        </div>
+        <div class="skills__tags">
+          <span class="skill-tag">Social Media Newsroom</span>
+          <span class="skill-tag">Digital-First Content</span>
+          <span class="skill-tag">YouTube &amp; Facebook Live</span>
+          <span class="skill-tag">Live Streaming Platforms</span>
+          <span class="skill-tag">Audience Analytics Awareness</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ACHIEVEMENT SECTION
+============================================================ -->
+<section id="achievement" class="section achievement" aria-label="Achievements and Awards">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label section-label--gold">Recognition ★</span>
+      <h2 class="section-title">Achievements &amp; Awards</h2>
+      <p class="section-desc">Honours, recognitions, and awards received from media organisations, industry bodies, and national institutions.</p>
+    </div>
+
+    <!-- ✏️ EDIT ACHIEVEMENTS: Update each card with your real award details -->
+    <div class="achievement__grid">
+
+      <!-- Award 1 -->
+      <article class="achievement-card reveal">
+        <div class="achievement-card__visual">
+          <!-- 📷 EDIT: Place your award photo at assets/images/achievements/achievement-award-01.jpg -->
+          <img src="assets/images/achievements/achievement-award-01.jpg" alt="Best Emerging News Presenter Award" class="achievement-card__image" loading="lazy">
+          <div class="achievement-card__img-fallback" aria-hidden="true">
+            <svg viewBox="0 0 48 56" fill="none" width="36" height="42"><path d="M24 4L29.5 16H43L32.5 24.5L37 38L24 30L11 38L15.5 24.5L5 16H18.5L24 4Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="24" y1="38" x2="24" y2="48" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="48" x2="34" y2="48" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <span class="achievement-card__year">2024</span><!-- ✏️ -->
+        </div>
+        <div class="achievement-card__body">
+          <span class="achievement-card__category">National Media Award</span><!-- ✏️ -->
+          <h3 class="achievement-card__title">Best Emerging News Presenter</h3><!-- ✏️ -->
+          <span class="achievement-card__org">Bangladesh Journalists Association</span><!-- ✏️ -->
+          <p class="achievement-card__desc">Recognised for outstanding contribution to national broadcast journalism and on-screen excellence during primetime coverage.</p><!-- ✏️ -->
+        </div>
+      </article>
+
+      <!-- Award 2 -->
+      <article class="achievement-card reveal">
+        <div class="achievement-card__visual">
+          <img src="assets/images/achievements/achievement-award-02.jpg" alt="Excellence in Live Broadcast Award" class="achievement-card__image" loading="lazy">
+          <div class="achievement-card__img-fallback" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none" width="36" height="42"><path d="M24 4L29.5 16H43L32.5 24.5L37 38L24 30L11 38L15.5 24.5L5 16H18.5L24 4Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="24" y1="38" x2="24" y2="48" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="48" x2="34" y2="48" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <span class="achievement-card__year">2023</span><!-- ✏️ -->
+        </div>
+        <div class="achievement-card__body">
+          <span class="achievement-card__category">Industry Recognition</span><!-- ✏️ -->
+          <h3 class="achievement-card__title">Excellence in Live Broadcast</h3><!-- ✏️ -->
+          <span class="achievement-card__org">Television Broadcasters Forum</span><!-- ✏️ -->
+          <p class="achievement-card__desc">Awarded for exceptional performance during the live national election coverage broadcast, commended for composure and editorial clarity.</p><!-- ✏️ -->
+        </div>
+      </article>
+
+      <!-- Award 3 -->
+      <article class="achievement-card reveal">
+        <div class="achievement-card__visual">
+          <img src="assets/images/achievements/achievement-award-03.jpg" alt="Special Coverage Appreciation Award" class="achievement-card__image" loading="lazy">
+          <div class="achievement-card__img-fallback" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none" width="36" height="42"><path d="M24 4L29.5 16H43L32.5 24.5L37 38L24 30L11 38L15.5 24.5L5 16H18.5L24 4Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="24" y1="38" x2="24" y2="48" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="48" x2="34" y2="48" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <span class="achievement-card__year">2022</span>
+        </div>
+        <div class="achievement-card__body">
+          <span class="achievement-card__category">Special Recognition</span>
+          <h3 class="achievement-card__title">Special Coverage Appreciation</h3>
+          <span class="achievement-card__org">Ministry of Information</span>
+          <p class="achievement-card__desc">Special recognition for responsible and accurate field coverage during the 2022 national crisis situation, delivered under extreme pressure.</p>
+        </div>
+      </article>
+
+      <!-- Award 4 -->
+      <article class="achievement-card reveal">
+        <div class="achievement-card__visual">
+          <img src="assets/images/achievements/achievement-award-04.jpg" alt="Media Communication Excellence Certificate" class="achievement-card__image" loading="lazy">
+          <div class="achievement-card__img-fallback" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none" width="36" height="42"><path d="M24 4L29.5 16H43L32.5 24.5L37 38L24 30L11 38L15.5 24.5L5 16H18.5L24 4Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="24" y1="38" x2="24" y2="48" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="48" x2="34" y2="48" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <span class="achievement-card__year">2021</span>
+        </div>
+        <div class="achievement-card__body">
+          <span class="achievement-card__category">Professional Certificate</span>
+          <h3 class="achievement-card__title">Media Communication Excellence</h3>
+          <span class="achievement-card__org">Commonwealth Broadcasting Association</span>
+          <p class="achievement-card__desc">Awarded the Media Communication Excellence Certificate for demonstrated leadership in public communication and broadcast journalism.</p>
+        </div>
+      </article>
+
+      <!-- Award 5 -->
+      <article class="achievement-card reveal">
+        <div class="achievement-card__visual">
+          <img src="assets/images/achievements/achievement-award-01.jpg" alt="Outstanding Programme Host Recognition" class="achievement-card__image" loading="lazy">
+          <div class="achievement-card__img-fallback" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none" width="36" height="42"><path d="M24 4L29.5 16H43L32.5 24.5L37 38L24 30L11 38L15.5 24.5L5 16H18.5L24 4Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="24" y1="38" x2="24" y2="48" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="48" x2="34" y2="48" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <span class="achievement-card__year">2020</span>
+        </div>
+        <div class="achievement-card__body">
+          <span class="achievement-card__category">Programme Excellence</span>
+          <h3 class="achievement-card__title">Outstanding Programme Host</h3>
+          <span class="achievement-card__org">National Broadcasters Council</span>
+          <p class="achievement-card__desc">Recognised as Outstanding Programme Host for the flagship weekly current affairs interview programme, commended for depth and guest engagement.</p>
+        </div>
+      </article>
+
+      <!-- Award 6 -->
+      <article class="achievement-card reveal">
+        <div class="achievement-card__visual">
+          <img src="assets/images/achievements/achievement-award-02.jpg" alt="Public Communication Leadership Honor" class="achievement-card__image" loading="lazy">
+          <div class="achievement-card__img-fallback" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none" width="36" height="42"><path d="M24 4L29.5 16H43L32.5 24.5L37 38L24 30L11 38L15.5 24.5L5 16H18.5L24 4Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="24" y1="38" x2="24" y2="48" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="48" x2="34" y2="48" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <span class="achievement-card__year">2019</span>
+        </div>
+        <div class="achievement-card__body">
+          <span class="achievement-card__category">Public Service Honour</span>
+          <h3 class="achievement-card__title">Public Communication Leadership</h3>
+          <span class="achievement-card__org">Press Institute of Bangladesh</span>
+          <p class="achievement-card__desc">Honoured by the Press Institute for demonstrated leadership in public communication and for promoting responsible broadcast journalism practices.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     TRAINING SECTION
+============================================================ -->
+<section id="training" class="section training" aria-label="Training and Certification">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">Professional Development</span>
+      <h2 class="section-title">Training &amp; Certification</h2>
+      <p class="section-desc">Industry training programmes, workshops, and professional development certifications from leading global media institutions.</p>
+    </div>
+
+    <!-- ✏️ EDIT TRAINING: Update each card with your real training details -->
+    <div class="training__grid">
+
+      <article class="training-card reveal">
+        <div class="training-card__cert">
+          <!-- 📷 EDIT: Place certificate image at assets/images/certificates/certificate-01.jpg -->
+          <img src="assets/images/certificates/certificate-01.jpg" alt="Broadcast Journalism Training Certificate" class="training-card__cert-img" loading="lazy">
+          <div class="training-card__cert-fallback" aria-hidden="true"><svg viewBox="0 0 60 44" fill="none" width="44" height="32"><rect x="1" y="1" width="58" height="42" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="14" x2="50" y2="14" stroke="currentColor" stroke-width="1"/><line x1="10" y1="21" x2="40" y2="21" stroke="currentColor" stroke-width="1"/><line x1="10" y1="28" x2="35" y2="28" stroke="currentColor" stroke-width="1"/><circle cx="47" cy="31" r="7" stroke="currentColor" stroke-width="1.5"/><polyline points="43.5 31 46 33.5 50.5 28" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        </div>
+        <div class="training-card__body">
+          <span class="training-card__date">2023</span><!-- ✏️ -->
+          <h3 class="training-card__title">Advanced Broadcast Journalism Training</h3><!-- ✏️ -->
+          <span class="training-card__institution">Reuters Institute for the Study of Journalism, University of Oxford</span><!-- ✏️ -->
+          <p class="training-card__desc">Intensive programme covering digital newsroom leadership, editorial standards in live broadcasting, and audience-first journalism methodology.</p><!-- ✏️ -->
+          <ul class="training-card__points">
+            <li>Digital-first editorial decision-making in live environments</li><!-- ✏️ -->
+            <li>Live broadcast crisis management and communication protocols</li>
+            <li>Audience engagement and public trust strategies</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="training-card reveal">
+        <div class="training-card__cert">
+          <img src="assets/images/certificates/certificate-02.jpg" alt="Voice Delivery Workshop Certificate" class="training-card__cert-img" loading="lazy">
+          <div class="training-card__cert-fallback" aria-hidden="true"><svg viewBox="0 0 60 44" fill="none" width="44" height="32"><rect x="1" y="1" width="58" height="42" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="14" x2="50" y2="14" stroke="currentColor" stroke-width="1"/><line x1="10" y1="21" x2="40" y2="21" stroke="currentColor" stroke-width="1"/><line x1="10" y1="28" x2="35" y2="28" stroke="currentColor" stroke-width="1"/><circle cx="47" cy="31" r="7" stroke="currentColor" stroke-width="1.5"/><polyline points="43.5 31 46 33.5 50.5 28" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        </div>
+        <div class="training-card__body">
+          <span class="training-card__date">2022</span>
+          <h3 class="training-card__title">News Presentation &amp; Voice Delivery Workshop</h3>
+          <span class="training-card__institution">BBC Media Action, London</span>
+          <p class="training-card__desc">Professional workshop focused on voice technique, delivery rhythm, and on-camera presentation skills specifically for broadcast journalism professionals.</p>
+          <ul class="training-card__points">
+            <li>Voice projection, modulation, and control techniques</li>
+            <li>Teleprompter speed, fluency, and eye contact training</li>
+            <li>On-camera authority and body language coaching</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="training-card reveal">
+        <div class="training-card__cert">
+          <img src="assets/images/certificates/certificate-03.jpg" alt="Media Ethics Training Certificate" class="training-card__cert-img" loading="lazy">
+          <div class="training-card__cert-fallback" aria-hidden="true"><svg viewBox="0 0 60 44" fill="none" width="44" height="32"><rect x="1" y="1" width="58" height="42" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="14" x2="50" y2="14" stroke="currentColor" stroke-width="1"/><line x1="10" y1="21" x2="40" y2="21" stroke="currentColor" stroke-width="1"/><line x1="10" y1="28" x2="35" y2="28" stroke="currentColor" stroke-width="1"/><circle cx="47" cy="31" r="7" stroke="currentColor" stroke-width="1.5"/><polyline points="43.5 31 46 33.5 50.5 28" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        </div>
+        <div class="training-card__body">
+          <span class="training-card__date">2021</span>
+          <h3 class="training-card__title">Media Ethics &amp; Editorial Standards</h3>
+          <span class="training-card__institution">Press Institute of Bangladesh (PIB)</span>
+          <p class="training-card__desc">Comprehensive training on responsible journalism ethics, editorial independence, fact-checking standards, and legal frameworks in broadcast media.</p>
+          <ul class="training-card__points">
+            <li>Broadcast-specific legal and ethical frameworks</li>
+            <li>Fact-checking and source verification methodologies</li>
+            <li>Editorial independence and newsroom judgment</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="training-card reveal">
+        <div class="training-card__cert">
+          <img src="assets/images/certificates/certificate-04.jpg" alt="Crisis Communication Workshop Certificate" class="training-card__cert-img" loading="lazy">
+          <div class="training-card__cert-fallback" aria-hidden="true"><svg viewBox="0 0 60 44" fill="none" width="44" height="32"><rect x="1" y="1" width="58" height="42" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="14" x2="50" y2="14" stroke="currentColor" stroke-width="1"/><line x1="10" y1="21" x2="40" y2="21" stroke="currentColor" stroke-width="1"/><line x1="10" y1="28" x2="35" y2="28" stroke="currentColor" stroke-width="1"/><circle cx="47" cy="31" r="7" stroke="currentColor" stroke-width="1.5"/><polyline points="43.5 31 46 33.5 50.5 28" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        </div>
+        <div class="training-card__body">
+          <span class="training-card__date">2020</span>
+          <h3 class="training-card__title">Live Reporting &amp; Crisis Communication</h3>
+          <span class="training-card__institution">DW Akademie, Germany</span>
+          <p class="training-card__desc">Intensive crisis communication and live reporting workshop by Deutsche Welle journalists covering conflict, disaster, and emergency news environments.</p>
+          <ul class="training-card__points">
+            <li>Crisis scenario simulation and live anchoring exercises</li>
+            <li>Field safety and on-location communication protocols</li>
+            <li>Sensitivity and accuracy standards in crisis reporting</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="training-card reveal">
+        <div class="training-card__cert">
+          <img src="assets/images/certificates/certificate-01.jpg" alt="Interview Techniques Certificate" class="training-card__cert-img" loading="lazy">
+          <div class="training-card__cert-fallback" aria-hidden="true"><svg viewBox="0 0 60 44" fill="none" width="44" height="32"><rect x="1" y="1" width="58" height="42" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="14" x2="50" y2="14" stroke="currentColor" stroke-width="1"/><line x1="10" y1="21" x2="40" y2="21" stroke="currentColor" stroke-width="1"/><line x1="10" y1="28" x2="35" y2="28" stroke="currentColor" stroke-width="1"/><circle cx="47" cy="31" r="7" stroke="currentColor" stroke-width="1.5"/><polyline points="43.5 31 46 33.5 50.5 28" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        </div>
+        <div class="training-card__body">
+          <span class="training-card__date">2019</span>
+          <h3 class="training-card__title">Interview Techniques &amp; Public Communication</h3>
+          <span class="training-card__institution">CILT International, United Kingdom</span>
+          <p class="training-card__desc">Professional certification in advanced interview structuring, public communication strategy, and broadcast engagement techniques for senior journalists.</p>
+          <ul class="training-card__points">
+            <li>Power interview structuring and follow-up techniques</li>
+            <li>Managing difficult or evasive interview subjects</li>
+            <li>Public communication psychology and persuasion</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="training-card reveal">
+        <div class="training-card__cert">
+          <img src="assets/images/certificates/certificate-02.jpg" alt="Digital Journalism Certificate" class="training-card__cert-img" loading="lazy">
+          <div class="training-card__cert-fallback" aria-hidden="true"><svg viewBox="0 0 60 44" fill="none" width="44" height="32"><rect x="1" y="1" width="58" height="42" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="14" x2="50" y2="14" stroke="currentColor" stroke-width="1"/><line x1="10" y1="21" x2="40" y2="21" stroke="currentColor" stroke-width="1"/><line x1="10" y1="28" x2="35" y2="28" stroke="currentColor" stroke-width="1"/><circle cx="47" cy="31" r="7" stroke="currentColor" stroke-width="1.5"/><polyline points="43.5 31 46 33.5 50.5 28" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        </div>
+        <div class="training-card__body">
+          <span class="training-card__date">2018</span>
+          <h3 class="training-card__title">Digital Journalism &amp; Social Media Newsroom</h3>
+          <span class="training-card__institution">WAN-IFRA, World Association of News Publishers</span>
+          <p class="training-card__desc">Training on integrating digital and social media practices into broadcast newsroom workflows, covering platform-native storytelling and audience engagement.</p>
+          <ul class="training-card__points">
+            <li>Social media live journalism best practices</li>
+            <li>Platform-specific audience behaviour and content strategy</li>
+            <li>Digital verification and misinformation prevention</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     MEDIA GALLERY SECTION
+============================================================ -->
+<section id="gallery" class="section gallery" aria-label="Media Gallery">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">Behind the Camera</span>
+      <h2 class="section-title">Media Gallery</h2>
+      <p class="section-desc">Studio moments, field coverage, interviews, and event anchoring — captured on and off camera.</p>
+    </div>
+
+    <!-- Filter buttons — ✏️ EDIT: Match your gallery item categories below -->
+    <div class="gallery__filters reveal" role="group" aria-label="Filter gallery by category">
+      <button class="gallery__filter-btn gallery__filter-btn--active" data-filter="all">All</button>
+      <button class="gallery__filter-btn" data-filter="studio">Studio</button>
+      <button class="gallery__filter-btn" data-filter="field">Field Coverage</button>
+      <button class="gallery__filter-btn" data-filter="interview">Interviews</button>
+      <button class="gallery__filter-btn" data-filter="event">Events</button>
+      <button class="gallery__filter-btn" data-filter="video">Videos</button>
+    </div>
+
+    <!-- Gallery grid
+         ✏️ EDIT: For each item, change data-category and the img src.
+         📷 EDIT: Place images in assets/images/gallery/ folder.
+         Available categories: studio | field | interview | event | video -->
+    <div class="gallery__grid" id="galleryGrid" role="list">
+
+      <div class="gallery__item" data-category="studio" data-type="image" data-index="0" role="listitem">
+        <button class="gallery__item-btn" aria-label="View studio broadcast anchoring photo" data-lightbox>
+          <div class="gallery__item-inner">
+            <img src="assets/images/gallery/gallery-01.jpg" alt="Studio broadcast anchoring" class="gallery__img" loading="lazy">
+            <div class="gallery__img-fallback" aria-hidden="true"><svg viewBox="0 0 60 40" fill="none" width="32" height="22"><rect x="1" y="1" width="58" height="38" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="16" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M1 35 L25 22 L40 30 L50 24 L59 30" stroke="currentColor" stroke-width="1.5"/></svg><span>Studio</span></div>
+            <div class="gallery__overlay"><span class="gallery__overlay-cat">Studio</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          </div>
+        </button>
+      </div>
+
+      <div class="gallery__item" data-category="studio" data-type="image" data-index="1" role="listitem">
+        <button class="gallery__item-btn" aria-label="View news desk anchoring photo" data-lightbox>
+          <div class="gallery__item-inner">
+            <img src="assets/images/gallery/gallery-02.jpg" alt="News desk anchoring" class="gallery__img" loading="lazy">
+            <div class="gallery__img-fallback" aria-hidden="true"><svg viewBox="0 0 60 40" fill="none" width="32" height="22"><rect x="1" y="1" width="58" height="38" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="16" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M1 35 L25 22 L40 30 L50 24 L59 30" stroke="currentColor" stroke-width="1.5"/></svg><span>Studio</span></div>
+            <div class="gallery__overlay"><span class="gallery__overlay-cat">Studio</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          </div>
+        </button>
+      </div>
+
+      <div class="gallery__item" data-category="field" data-type="image" data-index="2" role="listitem">
+        <button class="gallery__item-btn" aria-label="View field reporting coverage photo" data-lightbox>
+          <div class="gallery__item-inner">
+            <img src="assets/images/gallery/gallery-03.jpg" alt="Field reporting coverage" class="gallery__img" loading="lazy">
+            <div class="gallery__img-fallback" aria-hidden="true"><svg viewBox="0 0 60 40" fill="none" width="32" height="22"><rect x="1" y="1" width="58" height="38" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="16" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M1 35 L25 22 L40 30 L50 24 L59 30" stroke="currentColor" stroke-width="1.5"/></svg><span>Field</span></div>
+            <div class="gallery__overlay"><span class="gallery__overlay-cat">Field</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          </div>
+        </button>
+      </div>
+
+      <div class="gallery__item" data-category="interview" data-type="image" data-index="3" role="listitem">
+        <button class="gallery__item-btn" aria-label="View interview session photo" data-lightbox>
+          <div class="gallery__item-inner">
+            <img src="assets/images/gallery/gallery-04.jpg" alt="Interview session with senior official" class="gallery__img" loading="lazy">
+            <div class="gallery__img-fallback" aria-hidden="true"><svg viewBox="0 0 60 40" fill="none" width="32" height="22"><rect x="1" y="1" width="58" height="38" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="16" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M1 35 L25 22 L40 30 L50 24 L59 30" stroke="currentColor" stroke-width="1.5"/></svg><span>Interview</span></div>
+            <div class="gallery__overlay"><span class="gallery__overlay-cat">Interview</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          </div>
+        </button>
+      </div>
+
+      <div class="gallery__item" data-category="event" data-type="image" data-index="4" role="listitem">
+        <button class="gallery__item-btn" aria-label="View event anchoring photo" data-lightbox>
+          <div class="gallery__item-inner">
+            <img src="assets/images/gallery/gallery-05.jpg" alt="Event anchoring ceremony" class="gallery__img" loading="lazy">
+            <div class="gallery__img-fallback" aria-hidden="true"><svg viewBox="0 0 60 40" fill="none" width="32" height="22"><rect x="1" y="1" width="58" height="38" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="16" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M1 35 L25 22 L40 30 L50 24 L59 30" stroke="currentColor" stroke-width="1.5"/></svg><span>Event</span></div>
+            <div class="gallery__overlay"><span class="gallery__overlay-cat">Event</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          </div>
+        </button>
+      </div>
+
+      <div class="gallery__item" data-category="field" data-type="image" data-index="5" role="listitem">
+        <button class="gallery__item-btn" aria-label="View behind the scenes field coverage photo" data-lightbox>
+          <div class="gallery__item-inner">
+            <img src="assets/images/gallery/gallery-06.jpg" alt="Behind the scenes field coverage" class="gallery__img" loading="lazy">
+            <div class="gallery__img-fallback" aria-hidden="true"><svg viewBox="0 0 60 40" fill="none" width="32" height="22"><rect x="1" y="1" width="58" height="38" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="16" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M1 35 L25 22 L40 30 L50 24 L59 30" stroke="currentColor" stroke-width="1.5"/></svg><span>Field</span></div>
+            <div class="gallery__overlay"><span class="gallery__overlay-cat">Field</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          </div>
+        </button>
+      </div>
+
+      <div class="gallery__item" data-category="interview" data-type="image" data-index="6" role="listitem">
+        <button class="gallery__item-btn" aria-label="View panel discussion hosting photo" data-lightbox>
+          <div class="gallery__item-inner">
+            <img src="assets/images/gallery/gallery-07.jpg" alt="Panel discussion hosting" class="gallery__img" loading="lazy">
+            <div class="gallery__img-fallback" aria-hidden="true"><svg viewBox="0 0 60 40" fill="none" width="32" height="22"><rect x="1" y="1" width="58" height="38" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="16" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M1 35 L25 22 L40 30 L50 24 L59 30" stroke="currentColor" stroke-width="1.5"/></svg><span>Interview</span></div>
+            <div class="gallery__overlay"><span class="gallery__overlay-cat">Interview</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          </div>
+        </button>
+      </div>
+
+      <!-- Gallery video item (plays in lightbox) -->
+      <!-- 🎥 EDIT VIDEO: Replace data-video-src with your YouTube embed URL -->
+      <div class="gallery__item" data-category="video" data-type="video"
+           data-video-src="https://www.youtube.com/embed/ysz5S6PUM-U" data-index="7" role="listitem">
+        <button class="gallery__item-btn" aria-label="Play video reel" data-lightbox>
+          <div class="gallery__item-inner gallery__item-inner--video">
+            <img src="assets/images/gallery/gallery-08.jpg" alt="Video reel thumbnail" class="gallery__img" loading="lazy">
+            <div class="gallery__img-fallback" aria-hidden="true"><svg viewBox="0 0 60 40" fill="none" width="32" height="22"><rect x="1" y="1" width="58" height="38" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="16" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M1 35 L25 22 L40 30 L50 24 L59 30" stroke="currentColor" stroke-width="1.5"/></svg><span>Video</span></div>
+            <div class="gallery__overlay gallery__overlay--video">
+              <span class="gallery__overlay-cat">Video</span>
+              <svg class="gallery__play-icon" viewBox="0 0 24 24" fill="currentColor" width="44" height="44" aria-hidden="true"><circle cx="12" cy="12" r="12" opacity="0.25"/><polygon points="10 7.5 17.5 12 10 16.5 10 7.5"/></svg>
+            </div>
+          </div>
+        </button>
+      </div>
+
+    </div><!-- /gallery__grid -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT SECTION
+============================================================ -->
+<section id="contact" class="section contact" aria-label="Contact">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-title">Contact</h2>
+      <p class="section-desc">Available for news presentation, live event anchoring, corporate communication, and media collaborations.</p>
+    </div>
+
+    <div class="contact__grid">
+
+      <!-- Contact Info -->
+      <div class="contact__info reveal">
+
+        <div class="contact__info-items">
+          <!-- ✏️ EDIT: Your email address -->
+          <div class="contact__info-item">
+            <span class="contact__info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+            <div>
+              <span class="contact__info-label">Email</span>
+              <a href="mailto:yourname@email.com" class="contact__info-value">yourname@email.com</a><!-- ✏️ -->
+            </div>
+          </div>
+          <!-- ✏️ EDIT: Your phone number -->
+          <div class="contact__info-item">
+            <span class="contact__info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l1.46-1.46a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div>
+              <span class="contact__info-label">Phone</span>
+              <a href="tel:+8801700000000" class="contact__info-value">+880 1700 000 000</a><!-- ✏️ -->
+            </div>
+          </div>
+          <!-- ✏️ EDIT: Your location/city -->
+          <div class="contact__info-item">
+            <span class="contact__info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div>
+              <span class="contact__info-label">Location</span>
+              <span class="contact__info-value">Dhaka, Bangladesh</span><!-- ✏️ -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Social links — 🔗 EDIT: Replace # with your real profile URLs -->
+        <div class="contact__social">
+          <h3 class="contact__social-heading">Connect</h3>
+          <div class="contact__social-links">
+            <a href="#" class="contact__social-link" aria-label="LinkedIn profile"><!-- 🔗 Replace # with your LinkedIn URL -->
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="#" class="contact__social-link" aria-label="Facebook profile"><!-- 🔗 Replace # with your Facebook URL -->
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a href="#" class="contact__social-link" aria-label="YouTube channel"><!-- 🔗 Replace # with your YouTube URL -->
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
+            <a href="#" class="contact__social-link" aria-label="X (Twitter) profile"><!-- 🔗 Replace # with your X/Twitter URL -->
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.26 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              X (Twitter)
+            </a>
+          </div>
+        </div>
+
+        <!-- Resume CTA in Contact -->
+        <div class="contact__resume-cta">
+          <a href="assets/documents/resume.pdf" download="YourName-Resume.pdf" class="btn btn--secondary">Download Resume</a><!-- ✏️ -->
+          <a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--outline">View Resume</a>
+        </div>
+
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact__form-wrap reveal">
+        <form class="contact__form" id="contactForm" novalidate aria-label="Contact form">
+          <div class="form-field">
+            <label for="contactName" class="form-label">Full Name</label>
+            <input type="text" id="contactName" name="name" class="form-input" placeholder="Your full name" autocomplete="name" required>
+            <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-field">
+            <label for="contactEmail" class="form-label">Email Address</label>
+            <input type="email" id="contactEmail" name="email" class="form-input" placeholder="your@email.com" autocomplete="email" required>
+            <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-field">
+            <label for="contactSubject" class="form-label">Subject</label>
+            <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Programme assignment, collaboration…" required>
+            <span class="form-error" id="subjectError" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-field">
+            <label for="contactMessage" class="form-label">Message</label>
+            <textarea id="contactMessage" name="message" class="form-input form-textarea" placeholder="Tell me about the assignment or collaboration…" rows="5" required></textarea>
+            <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="contactSubmit">Send Message</button>
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Message sent. I will be in touch shortly.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+     ✏️ EDIT: Change "Your Name" and title below
+============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="footer__brand-name">Your Name</span><!-- ✏️ -->
+        <span class="footer__brand-role">News Presenter &amp; Broadcast Journalist</span><!-- ✏️ -->
+        <p class="footer__brand-tag">Delivering truth with clarity and composure.</p><!-- ✏️ -->
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievement">Achievements</a>
+        <a href="#training">Training</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__actions">
+        <a href="assets/documents/resume.pdf" download="YourName-Resume.pdf" class="btn btn--outline btn--sm">Download Resume</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© <span id="currentYear"></span> Your Name. All rights reserved.</span><!-- ✏️ -->
+      <span class="footer__tag">Portfolio · Broadcast Authority</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- LIGHTBOX MODAL (do not edit) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media viewer" hidden>
+  <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+  <div class="lightbox__container">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close media viewer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="lightbox__media" id="lightboxMedia" role="img" aria-live="polite"></div>
+    <div class="lightbox__controls">
+      <button class="lightbox__nav-btn" id="lightboxPrev" aria-label="Previous item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="lightbox__nav-btn" id="lightboxNext" aria-label="Next item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript — loaded at end of body, works by opening index.html directly -->
+<script src="js/cursor.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 </html>
