@@ -96,6 +96,34 @@ window.PORTFOLIO_DATA = {
     // ───────── NATIONAL ─────────
     {
       category: "national",
+      link:     "https://www.youtube.com/embed/TLI_AyObZB0",
+      title:    "Pakistan Denies Airspace: Rooppur Uranium Shipment Delayed",
+      desc:     "This video reports on Pakistan denying airspace access to a cargo plane carrying uranium for Bangladesh’s Rooppur Nuclear Power Plant, delaying the critical shipment's arrival until October.",
+      date:     "Sep 28, 2026",
+    },
+    {
+      category: "national",
+      link:     "https://www.youtube.com/embed/R9mw92a-cSk",
+      title:    "Cumilla Police Detain 624 Suspects in Massive Teen Gang Crackdown",
+      desc:     "This video reports on an overnight drive across 18 police stations in Cumilla, detaining 624 suspect teen gang members to curb mugging, eve-teasing, and rising youth crime.",
+      date:     "Sep 24, 2026",
+    },
+    {
+      category: "national",
+      link:     "https://www.youtube.com/embed/hoX7ztz6CKs",
+      title:    "Bus Fare Hike in Bangladesh: Cost Rises 571 Taka Per 100 KM",
+      desc:     "This video highlights the impact of rising fuel prices in Bangladesh, detailing how bus fares increased by 571 Taka per 100 kilometers, creating financial pressure on commuters.",
+      date:     "Sep 21, 2026",
+    },
+    {
+      category: "national",
+      link:     "https://www.youtube.com/embed/g2vZFbR_YAg",
+      title:    "Dhaka Metrorail: Costs Reduced for MRT Lines 1 and 5",
+      desc:     "This video details the cost reduction for Dhaka’s MRT Line 1 and Line 5 projects, highlighting updated budget estimates, extended completion timelines, and their impact on urban traffic.",
+      date:     "Sep 15, 2026",
+    },
+    {
+      category: "national",
       link:     "https://www.youtube.com/embed/Gd5u2h7AxTQ",
       title:    "25-KG Case Dossier Submitted Against Obaidul Quader and AL Leaders",
       desc:     "This video reports on a 25-kilogram case file submitted to the tribunal involving former Awami League general secretary Obaidul Quader and seven top leaders regarding July violence.",
@@ -225,6 +253,13 @@ window.PORTFOLIO_DATA = {
     },
 
     // ───────── SPORTS ─────────
+    {
+      category: "sports",
+      link:     "https://www.youtube.com/embed/vemEP4LspJ4",
+      title:    "Lionel Messi Recalled to Argentina Squad for Farewell Match",
+      desc:     "This video highlights Argentina recalling Lionel Messi to the national squad for an official farewell friendly match against Benin, honoring his legendary international career alongside his World Cup-winning teammates.",
+      date:     "Sep 16, 2026",
+    },
     {
       category: "sports",
       link:     "https://www.youtube.com/embed/vemEP4LspJ4",
