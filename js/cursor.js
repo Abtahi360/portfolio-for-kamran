@@ -1,20 +1,6 @@
-/**
- * js/cursor.js — Broadcast Focus Custom Cursor
- * ============================================================
- * Design: "Broadcast Tally + Lens Focus Ring"
- *   • Dot  → camera tally light (the on-air cue dot)
- *   • Ring → camera lens focus ring (trails behind mouse)
- *
- * Colors update automatically when theme changes via CSS vars.
- * To change sizes edit CONFIG below.
- * To change colors edit --cursor-* variables in css/theme.css
- *
- * This file uses no imports and no ES modules.
- * It works by opening index.html directly in a browser.
- * ============================================================
- */
 
-(function () {
+(
+  function () {
   'use strict';
 
   /* ── Skip on touch / coarse-pointer devices (mobile/tablet) ── */

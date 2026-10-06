@@ -1,25 +1,6 @@
-/**
- * js/app.js — Broadcast Authority Portfolio
- * ============================================================
- * All site interaction logic in one organised file.
- * No ES modules, no imports — works by opening index.html
- * directly in a browser (double-click or Live Server).
- *
- * Sections:
- *   1. Theme (light/dark toggle + localStorage)
- *   2. Navigation (sticky, hamburger, active links)
- *   3. Programs Tabs
- *   4. Gallery (filter + lightbox)
- *   5. Contact Form Validation
- *   6. Scroll Reveal (IntersectionObserver)
- *   7. Smooth Scroll (respects sticky nav height)
- *   8. News Ticker (pause on hover)
- *   9. Image Fallbacks
- *  10. Footer Year
- * ============================================================
- */
 
-(function () {
+(
+  function () {
   'use strict';
 
   /* ============================================================
@@ -201,6 +182,7 @@
         var iframe = document.createElement('iframe');
         iframe.src = auto; iframe.title = 'Video player'; iframe.frameBorder = '0';
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
         iframe.allowFullscreen = true;
         lbMedia.appendChild(iframe);
       } else {

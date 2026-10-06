@@ -22,10 +22,14 @@ STEP 4: Look for the "src" inside the iframe code that appears.
 
 STEP 5: Copy ONLY that URL. Do not copy the full <iframe> code.
 
-STEP 6: Open js/models/programsData.js (or galleryData.js)
-        and paste it as the embedUrl value:
+STEP 6: Open js/data.js, find the "programs" list, and paste the link
+        as the "link" value of a video entry:
 
-        embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        link: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+
+        (Shortcut: js/data.js also accepts a normal YouTube link such as
+         https://www.youtube.com/watch?v=dQw4w9WgXcQ or https://youtu.be/dQw4w9WgXcQ
+         and converts it to the embed link automatically.)
 
 ✅ CORRECT (embed link):
    https://www.youtube.com/embed/dQw4w9WgXcQ
@@ -51,9 +55,10 @@ STEP 4: Facebook will show embed code. Find the "src" URL.
         It looks like this:
         https://www.facebook.com/plugins/video.php?href=https%3A%2F%2F...
 
-STEP 5: Copy that URL and paste it as the embedUrl in the data file.
+STEP 5: Copy that URL and paste it as the "link" value in js/data.js.
+        (A normal Facebook video URL also works; it is converted automatically.)
 
-STEP 6: Also set: platform: "facebook"
+STEP 6: Optional: set  platform: "facebook"  (it is detected automatically from the link).
 
 IMPORTANT NOTE ABOUT FACEBOOK:
 Facebook embed may require your website to be published online
@@ -65,15 +70,13 @@ This is normal — it will work once the site is deployed online.
 GALLERY VIDEOS
 =================================================================
 
-For videos in the Gallery section (js/models/galleryData.js):
+For videos in the Gallery section (the "gallery" list in js/data.js):
 
   {
-    type:     "video",
     category: "video",
+    image:    "gallery-08.jpg",                       ← thumbnail (file in assets/images/gallery/)
     alt:      "Description of this video",
-    imagePath: "assets/images/gallery/thumbnail.jpg",  ← optional
-    videoSrc: "https://www.youtube.com/embed/YOUR_ID", ← embed URL
-    caption:  "Short caption",
+    link:     "https://www.youtube.com/embed/YOUR_ID", ← any YouTube link works
   },
 
 When a visitor clicks the video thumbnail in the gallery,
